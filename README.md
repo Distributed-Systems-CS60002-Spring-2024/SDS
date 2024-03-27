@@ -37,7 +37,7 @@ Executing this command is recommended before running the main code to ensure the
 ### Part-1: Read and Write Speed Analysis
   initialise database container with default configuration:
 ```
-   cd db_analysis/
+   cd analysis/
    python test1.py --type init
    python test1.py --type status
 
