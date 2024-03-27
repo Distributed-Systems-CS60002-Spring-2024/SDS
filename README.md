@@ -57,13 +57,13 @@ We obtain the following statistics for 10000 write and read requests respectivel
 
       No of successful requests: 10000/10000
       No of failed requests: 0/10000
-      Time taken to send 10000 requests: 188.25956535339355 seconds
+      Time taken to send 10000 requests: 167.41023538540846 seconds
 
   - Request Type: read
 
       No of successful requests: 10000/10000
       No of failed requests: 0/10000
-      Time taken to send 10000 requests: 60.557310581207275 seconds
+      Time taken to send 10000 requests: 51.78284389371722 seconds
 ```
 ### Part-2: Scaling number of shard replicas to 6
 ```
@@ -89,13 +89,13 @@ We obtain the following statistics for 10000 write and read requests respectivel
 
       No of successful requests: 10000/10000
       No of failed requests: 0/10000
-      Time taken to send 10000 requests: 571.5665924549103 seconds
+      Time taken to send 10000 requests: 508.23730615563343 seconds
 
 - Request Type: read
 
-      No of successful requests: 9995/10000
-      No of failed requests: 5/10000
-      Time taken to send 10000 requests: 109.68647050857544 seconds
+      No of successful requests: 9999/10000
+      No of failed requests: 1/10000
+      Time taken to send 10000 requests: 93.23730615563343 seconds
 ```
 The increased latency for write and read requests can be attributed to the increased number of replicas for each shard. This implies that both write and read requests need to access all replicas of a shard to maintain consistency, increasing the time taken to handle requests.
 ### Part-3 : Scaling number of servers to 10 and number of replicas to 8
@@ -121,13 +121,13 @@ yields the following statistics for 10000 write and read requests respectively:
 
   No of successful requests: 10000/10000
   No of failed requests: 0/10000
-  Time taken to send 10000 requests: 758.3099572658539 seconds
+  Time taken to send 10000 requests: 654.77689011048977 seconds
 
 - Request Type: read
 
-  No of successful requests: 9999/10000
-  No of failed requests: 1/10000
-  Time taken to send 10000 requests: 110.17270064353943 seconds
+  No of successful requests: 10000/10000
+  No of failed requests: 0/10000
+  Time taken to send 10000 requests: 92.23627111740922 seconds
 ```
 In this case, there is a noticeable, albeit slight increase in the latency for write and read requests compared to Part-2.
 
